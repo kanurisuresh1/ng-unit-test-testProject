@@ -1,0 +1,67 @@
+
+
+<section class="loginpage">
+    <div class="login col-lg-4 m-auto shadow-lg">
+
+        <h2>automation testing form</h2>
+        <form [formGroup]="loginForm">
+            <div class="form-group">
+                <label>check Box</label>
+                <label> <input type="checkbox" class="form-control" formControlName="check" value="bike" > :Bike</label>
+                <label> <input type="checkbox" class="form-control" formControlName="check" value="car" > :Car</label><br>
+            
+                <!-- <div *ngIf="loginForm.controls['check'].errors && loginForm.controls['check'].touched" id="checkvalidation">
+                    <span *ngIf="loginForm.controls['check'].errors.required" id="valichechk">
+                        please enter check box
+                    </span>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label>dropdown</label>
+                <select class="form-control" formControlName="dropdown" >
+                    <option value="fir">first</option>
+                    <option value="sec">secound</option>
+                    <option value="thir">thired</option>
+                    <option value="four">fourth</option>
+                </select>
+                <!-- <div *ngIf="loginForm.controls['dropdown'].errors && loginForm.controls['dropdown'].touched">
+                    <span *ngIf="loginForm.controls['dropdown'].errors.required" id="validrop">
+                        please enter dropdown
+                    </span>
+                </div> -->
+            </div>
+
+            <div class="form-group">
+                <label>Radio</label> 
+                <input type="radio" class="form-control" formControlName="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" class="form-control" formControlName="gender" value="female">
+                <label for="female">Female</label>
+                <!-- <div *ngIf="loginForm.controls['gender'].errors && loginForm.controls['gender'].touched">
+                    <span *ngIf="loginForm.controls['gender'].errors.required" id="valiradio">
+                        please enter gender
+                    </span>
+                </div> -->
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" formControlName="useremail" placeholder="Enter email" autocomplete="email">
+                <!-- <div *ngIf="loginForm.controls['useremail'].errors && loginForm.controls['useremail'].touched">
+                    <span *ngIf="loginForm.controls['useremail'].errors.required" id="valiemail">Enter Email ID</span>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password :</label>
+                <input formControlName="pws" autocomplete="new-password"  maxlength="20" type="password" class="form-control" placeholder="Password">
+
+                <!-- <div *ngIf="loginForm.controls['pws'].errors && loginForm.controls['pws'].touched">
+                    <div *ngIf="loginForm.controls['pws'].errors.required" id="valipass">Please enter Password.
+                    </div>
+                </div> -->
+            </div>
+  
+            <button type="submit" class="btn btn-primary col-lg-12"  (click)="cheackUser()">login</button>
+        </form>
+    </div>
+</section>
